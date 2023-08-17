@@ -1,0 +1,5 @@
+
+Catalog 
+ -catalogApi=> 5011
+ -photoStockApi=>5012
+identityServer =>5001
