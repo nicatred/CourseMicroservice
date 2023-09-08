@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Temp2
+namespace FreeCourse.Services.Order.Application.Dtos
 {
-    public class Salam2
+    public class CreatedOrderDto
     {
+        public int OrderId { get; set; }
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Temp
+namespace FreeCourse.Services.Order.Domain.Core
 {
-    public class Salam
+    public interface IAggregateRoot
     {
     }
 }
