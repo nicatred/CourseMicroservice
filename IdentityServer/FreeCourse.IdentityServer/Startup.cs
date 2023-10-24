@@ -91,7 +91,7 @@ namespace FreeCourse.IdentityServer
                 app.UseDatabaseErrorPage();
             }
 
-            app.UseStaticFiles();
+            app.UseStaticFiles(); 
 
             app.UseRouting();
             app.UseIdentityServer();

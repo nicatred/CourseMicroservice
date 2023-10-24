@@ -5,4 +5,5 @@ Catalog
  -basketApi=>5013
  -dicountApi=>5014
  -orderApi=>5015
+ -fakePaymenApi=>5016
 identityServer =>5001

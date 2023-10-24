@@ -18,8 +18,11 @@ namespace FreeCourse.IdentityServer
             new ApiResource("resource_photo_stock"){Scopes={"photo_stock_fullpermission"}},
             new ApiResource("resource_basket"){Scopes={"basket_fullpermission"}},
             new ApiResource("resource_discount"){Scopes={"dicount_fullpermission"}},
+            new ApiResource("resource_order"){Scopes={"order_fullpermission"}},
+            new ApiResource("resource_payment"){Scopes={"payment_fullpermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
             };
+
 
         public static IEnumerable<IdentityResource> IdentityResources =>
                    new IdentityResource[]
@@ -37,6 +40,8 @@ namespace FreeCourse.IdentityServer
                 new ApiScope("photo_stock_fullpermission","Photo Stock API üçün full icazə"),
                 new ApiScope("basket_fullpermission","Basket API üçün full icazə"),
                 new ApiScope("dicount_fullpermission","Discount API üçün full icazə"),
+                new ApiScope("order_fullpermission","Order API üçün full icazə"),
+                new ApiScope("payment_fullpermission","Payment API üçün full icazə"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -58,7 +63,7 @@ namespace FreeCourse.IdentityServer
                    AllowOfflineAccess =true,
                    ClientSecrets={new Secret("secret".Sha512())},
                    AllowedGrantTypes=GrantTypes.ResourceOwnerPassword,
-                   AllowedScopes = {"basket_fullpermission","dicount_fullpermission",IdentityServerConstants.StandardScopes.Email,
+                   AllowedScopes = {"basket_fullpermission","dicount_fullpermission","order_fullpermission","payment_fullpermission",IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.OfflineAccess,

@@ -16,7 +16,7 @@ namespace FreeCourse.Services.Order.Domain.Core
             get => _Id;
             set => _Id = value;
         }
-
+       
         public bool IsTransient()
         {
             return this.Id == default(Int32);

@@ -21,9 +21,9 @@ namespace FreeCourse.Services.Order.Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity< Domain.OrderAggregate.Order >().ToTable("Orders",DEFAULT_SCHEMA);
-            modelBuilder.Entity<Domain.OrderAggregate.Order>().OwnsOne(x => x.Address).WithOwner();
             modelBuilder.Entity<OrderItem >().ToTable("OrderItems",DEFAULT_SCHEMA);
-            modelBuilder.Entity<OrderItem>().Property(x => x.Price).HasColumnType("deciaml(18,2)");
+            modelBuilder.Entity<OrderItem>().Property(x => x.Price).HasColumnType("decimal(18,2)");
+            modelBuilder.Entity<Domain.OrderAggregate.Order>().OwnsOne(x => x.Address).WithOwner();
             base.OnModelCreating(modelBuilder);
         }
     }
