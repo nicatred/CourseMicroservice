@@ -1,0 +1,39 @@
+﻿@using FreeCourse.Web.Controllers;
+@model SigninInput
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4 offset-md-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title">Üye Giriş</div>
+                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                    <form asp-controller="Auth" asp-action="@nameof(AuthController.SignIn)" method="post">
+                        <div class="mb-3 row">
+                            <label asp-for="Email" for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" asp-for="Email"  class="form-control" id="staticEmail">
+                                <span class="text-danger" asp-validation-for="Email"></span>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label asp-for="Password" for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input asp-for="Password" type="password" class="form-control" id="inputPassword">
+                                <span class="text-danger" asp-validation-for="Password"></span>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" asp-for="Remember" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" asp-for="Remember" for="exampleCheck1"></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Giriş</button>
+                    </form>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+
